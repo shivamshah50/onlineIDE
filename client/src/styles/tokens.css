@@ -1,0 +1,33 @@
+:root {
+  /* Color — pulled from real syntax-highlighting roles, not a single neon accent */
+  --bg-canvas: #14171c;
+  --bg-surface: #1b1f26;
+  --bg-elevated: #232833;
+  --text-primary: #e6e8eb;
+  --text-muted: #8b93a1;
+  --accent-keyword: #c792ea; /* primary interactive accent — like a keyword token */
+  --accent-keyword-hover: #d6aef2;
+  --accent-string: #7fd9c4; /* secondary accent — like a string literal token */
+  --accent-error: #f07178; /* errors only — like an error underline */
+  --border-subtle: #2a2f3a;
+
+  /* Type */
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, Menlo, monospace;
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  --text-2xl: 2.25rem;
+
+  /* Spacing */
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+  --space-6: 4rem;
+
+  --radius: 6px;
+}
