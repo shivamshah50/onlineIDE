@@ -1,0 +1,6 @@
+node_modules/
+.env
+git_ssh_key
+git_ssh_key.pub
+dist/
+build/
