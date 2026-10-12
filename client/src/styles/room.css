@@ -1,0 +1,168 @@
+/* New file — imported only by RoomPage.tsx, so it won't collide with your
+   existing styles. Shares the .btn / .dash-muted / .dash-title classes
+   from dashboard.css, which RoomPage also uses for its empty/error states. */
+
+.room {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #14171c;
+  color: #e9ecf2;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.room-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #2a303b;
+}
+
+.room-back {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #8b93a3;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.room-back:hover {
+  background: #232833;
+}
+
+.room-name {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.room-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.room-body {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) 180px;
+  flex: 1;
+  min-height: 0;
+}
+
+.room-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-bottom: 1px solid #2a303b;
+  font-size: 13px;
+  color: #8b93a3;
+}
+
+.room-toolbar select {
+  padding: 4px 8px;
+  background: #232833;
+  border: 1px solid #2a303b;
+  border-radius: 6px;
+  color: #e9ecf2;
+}
+
+.room-sync-status {
+  margin-left: auto;
+  color: #f3b37a;
+  font-size: 12px;
+}
+
+.room-editor {
+  min-height: 0;
+  background: #1a1e25;
+}
+
+.room-console {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-top: 1px solid #2a303b;
+}
+
+.room-console-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px solid #2a303b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.room-console-status {
+  color: #8b93a3;
+  font-weight: 400;
+}
+
+.room-console-out {
+  flex: 1;
+  margin: 0;
+  padding: 12px 16px;
+  overflow: auto;
+  color: #8b93a3;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+}
+
+.room-state {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 12px;
+  max-width: 480px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px;
+  background: #14171c;
+  color: #e9ecf2;
+}
+
+.room-state-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Presence tags */
+
+.presence {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.presence-list {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.presence-tag {
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--tag-color, #c68fe8);
+  color: #14171c;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.presence-count {
+  color: #8b93a3;
+  font-size: 13px;
+}

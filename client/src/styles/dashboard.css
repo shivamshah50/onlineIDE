@@ -1,54 +1,206 @@
-.dashboard-shell {
+/*
+  REPLACES your current dashboard.css. I don't have its contents, so this is
+  a full file, not a diff. If tokens.css already defines variables like
+  --bg/--accent/--text, swap the hardcoded colors below for those instead —
+  I used plain values here since I can't see your token names.
+*/
+
+.dash {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background: #14171c;
+  color: #e9ecf2;
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
-.dashboard-header {
+.dash-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: var(--space-3) var(--space-4);
-  border-bottom: 1px solid var(--border-subtle);
+  padding: 14px 24px;
+  border-bottom: 1px solid #2a303b;
 }
 
-.dashboard-header .brand {
-  font-family: var(--font-mono);
-  font-weight: 600;
+.dash-logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
 }
 
-.dashboard-user {
+.dash-header-right {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: 14px;
+}
+
+.dash-user {
+  color: #e9ecf2;
+}
+
+.dash-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 48px;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+}
+
+.dash-title {
+  margin: 0 0 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 26px;
+}
+
+.dash-muted {
+  color: #8b93a3;
+}
+
+.dash-notice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dash-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #2a303b;
+}
+
+.dash-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 14px 10px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #2a303b;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dash-row:hover {
+  background: #1a1e25;
+}
+
+.dash-row-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.dash-row-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dash-chip {
+  padding: 2px 8px;
+  border: 1px solid #2a303b;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #8b93a3;
+}
+
+.dash-row-meta {
+  display: grid;
+  justify-items: end;
+  gap: 2px;
+  font-size: 13px;
+}
+
+.dash-row-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #8b93a3;
+}
+
+.dash-side {
+  display: grid;
+  align-content: start;
+  gap: 32px;
+}
+
+.dash-panel-title {
+  margin: 0 0 14px;
+  font-size: 17px;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #8b93a3;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 9px 11px;
+  background: #232833;
+  border: 1px solid #2a303b;
+  border-radius: 8px;
+  color: #e9ecf2;
+  font: inherit;
+}
+
+.field-error {
+  margin: -6px 0 12px;
+  color: #ff8a94;
+  font-size: 13px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #c68fe8;
+  color: #1c1226;
 }
 
 .btn-ghost {
   background: transparent;
-  border: 1px solid var(--border-subtle);
-  color: var(--text-primary);
-  border-radius: var(--radius);
+  border-color: #2a303b;
+  color: #e9ecf2;
+}
+
+.btn-sm {
   padding: 6px 12px;
-  font-size: var(--text-sm);
+  font-size: 13px;
 }
 
-.btn-ghost:hover {
-  border-color: var(--accent-keyword);
+.btn-block {
+  width: 100%;
 }
 
-.dashboard-empty {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: var(--space-2);
-  color: var(--text-muted);
-}
-
-.dashboard-empty h1 {
-  color: var(--text-primary);
-  font-size: var(--text-xl);
-  margin: 0;
+@media (max-width: 860px) {
+  .dash-main {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }

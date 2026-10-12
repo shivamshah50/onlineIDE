@@ -2,13 +2,16 @@
   "dependencies": {
     "@monaco-editor/react": "^4.7.0",
     "axios": "^1.20.0",
+    "lib0": "^0.2.119",
+    "monaco-editor": "^0.50.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-router-dom": "^7.18.4",
-    "socket.io-client": "^4.8.3",
+    "socket.io-client": "^4.8.4",
     "y-monaco": "^0.1.6",
+    "y-protocols": "^1.0.7",
     "y-websocket": "^3.1.0",
-    "yjs": "^13.6.32"
+    "yjs": "^13.6.33"
   },
   "devDependencies": {
     "@types/react": "^19.3.0",
@@ -18,8 +21,8 @@
     "vite": "^8.3.0"
   },
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview"
-}
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
 }
